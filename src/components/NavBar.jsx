@@ -11,7 +11,7 @@ const HURT_GIF = '/hurt-daan.gif';
 const DEATH_GIF = '/death-daan.gif';
 const DEATH_STATIC = '/death-daan-static.png'; // Static final frame
 const HURT_DURATION = 1500; // ms, adjust if needed
-const DEATH_DURATION = 1200; // ms, 13 frames at 10fps = 1.3 seconds
+const DEATH_DURATION = 1100; // ms, 13 frames at 10fps = 1.3 seconds
 const CLICK_RESET_TIME = 3000; // ms, time to reset click counter
 const DEATH_CLICK_THRESHOLD = 10;
 
