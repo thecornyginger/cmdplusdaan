@@ -1,7 +1,7 @@
 ---
 title: "Building my junk drawer"
 date: "2025-05-20"
-tags: ["react", "vite", "tailwindcss"]
+tags: ["webdev"]
 category: "development"
 excerpt: "Building my personal website with React, Vite, and TailwindCSS"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Building a lightweight CMS"
 date: "2025-05-26"
-tags: ["react-router-dom", "marked", "gray-matter"]
+tags: ["webdev"]
 category: "development"
 excerpt: "Building a 'simple' markdown-based devlog system"
 ---

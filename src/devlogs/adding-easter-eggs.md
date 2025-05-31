@@ -1,7 +1,7 @@
 ---
 title: "Adding Easter Eggs"
 date: "2025-05-21"
-tags: ["aseprite", "react"]
+tags: ["webdev"]
 category: "development"
 excerpt: "I needed to add silly interactive elements that 99% of visitors will never find."
 ---
