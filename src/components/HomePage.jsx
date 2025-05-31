@@ -94,6 +94,29 @@ function HomePage() {
 
               {/* Panel 3 */}
               <div className="bg-daanbrown/20 border-2 border-daanbrown rounded-lg p-4 w-72 min-h-56 flex flex-col shrink-0">
+                <h3 className="text-lg font-bold text-daanwhite mb-2">2048 Arcade</h3>
+                <p className="text-daanwhite/80 text-xs mb-3 flex-grow">
+                Merge tiles, reach 2048, with arcade twists on the classic sliding puzzle game.
+                </p>
+                <div className="flex gap-2 flex-wrap mb-3">
+                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">GDScript</span>
+                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">HTML</span>
+                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">CSS</span>
+                </div>
+                <div className="flex gap-2 mt-auto">
+                  <a target="_blank" href="https://cmdplusdaan.itch.io/2048-arcade" className="border border-daanbrown text-daanwhite hover:bg-daanbrown hover:text-daanpurple px-3 py-1.5 rounded text-xs font-bold transition-colors flex items-center gap-1.5">
+                    <svg className="w-3 h-3 fill-current" viewBox="0 0 16 16">
+                      <path d="M0 0h7v2H2v5h5V5h2v7H0V0z"/>
+                      <path d="M9 0h7v7h-2V2h-5V0z"/>
+                      <path d="M10 1l5 5-1 1-5-5z"/>
+                    </svg>
+                    Play on itch.io
+                  </a>
+                </div>
+              </div>
+              
+              {/* Panel 4 */}
+              <div className="bg-daanbrown/20 border-2 border-daanbrown rounded-lg p-4 w-72 min-h-56 flex flex-col shrink-0">
                 <h3 className="text-lg font-bold text-daanwhite mb-2">404: Name Not Found</h3>
                 <p className="text-daanwhite/80 text-xs mb-3 flex-grow">
                  You're shipwrecked. Collect resources and build a base on a (hopefully) deserted island.
