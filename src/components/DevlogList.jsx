@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { loadDevlogs, getAllTags } from '../utils/devlogUtils'
 
@@ -9,6 +9,7 @@ function DevlogList() {
   const [tags, setTags] = useState([])
   const [selectedTag, setSelectedTag] = useState('')
   const [loading, setLoading] = useState(true)
+  const [searchParams, setSearchParams] = useSearchParams()
 
   useEffect(() => {
     async function loadData() {
@@ -20,6 +21,12 @@ function DevlogList() {
         setDevlogs(devlogData)
         setFilteredDevlogs(devlogData)
         setTags(tagData)
+        
+        // Check if there's a tag parameter in the URL
+        const tagFromUrl = searchParams.get('tag')
+        if (tagFromUrl && tagData.includes(tagFromUrl)) {
+          setSelectedTag(tagFromUrl)
+        }
       } catch (error) {
         console.error('Error loading devlogs:', error)
       } finally {
@@ -28,15 +35,19 @@ function DevlogList() {
     }
     
     loadData()
-  }, [])
+  }, [searchParams])
 
   useEffect(() => {
     if (selectedTag) {
       setFilteredDevlogs(devlogs.filter(devlog => devlog.tags.includes(selectedTag)))
+      // Update URL when tag is selected
+      setSearchParams({ tag: selectedTag })
     } else {
       setFilteredDevlogs(devlogs)
+      // Remove tag parameter when showing all
+      setSearchParams({})
     }
-  }, [selectedTag, devlogs])
+  }, [selectedTag, devlogs, setSearchParams])
 
   const formatDate = (date) => {
     return new Date(date).toLocaleDateString('en-US', {

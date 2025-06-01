@@ -55,8 +55,8 @@ function HomePage() {
                 Build and automate a fantasy adventurers' guild. An idle game inspired by D&D.
                 </p>
                 <div className="flex gap-2 flex-wrap mb-3">
-                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">GDScript</span>
-                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">Godot</span>
+                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">gamedev</span>
+                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">godot</span>
                 </div>
                 <div className="flex gap-2 mt-auto">
                   <a target="_blank" href="https://play.google.com/store/apps/details?id=com.cmdplusdaan.idleguild" className="border border-daanbrown text-daanwhite hover:bg-daanbrown hover:text-daanpurple px-3 py-1.5 rounded text-xs font-bold transition-colors flex items-center gap-1.5">
@@ -76,9 +76,8 @@ function HomePage() {
                 Plant, grow, and harvest on a cozy pixel island! A relaxing tapping game.
                 </p>
                 <div className="flex gap-2 flex-wrap mb-3">
-                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">GDScript</span>
-                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">HTML</span>
-                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">CSS</span>
+                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">gamedev</span>
+                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">godot</span>
                 </div>
                 <div className="flex gap-2 mt-auto">
                   <a target="_blank" href="https://cmdplusdaan.itch.io/tinytiller" className="border border-daanbrown text-daanwhite hover:bg-daanbrown hover:text-daanpurple px-3 py-1.5 rounded text-xs font-bold transition-colors flex items-center gap-1.5">
@@ -99,9 +98,8 @@ function HomePage() {
                 Merge tiles, reach 2048, with arcade twists on the classic sliding puzzle game.
                 </p>
                 <div className="flex gap-2 flex-wrap mb-3">
-                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">GDScript</span>
-                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">HTML</span>
-                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">CSS</span>
+                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">gamedev</span>
+                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">godot</span>
                 </div>
                 <div className="flex gap-2 mt-auto">
                   <a target="_blank" href="https://cmdplusdaan.itch.io/2048-arcade" className="border border-daanbrown text-daanwhite hover:bg-daanbrown hover:text-daanpurple px-3 py-1.5 rounded text-xs font-bold transition-colors flex items-center gap-1.5">
@@ -117,23 +115,23 @@ function HomePage() {
               
               {/* Panel 4 */}
               <div className="bg-daanbrown/20 border-2 border-daanbrown rounded-lg p-4 w-72 min-h-56 flex flex-col shrink-0">
-                <h3 className="text-lg font-bold text-daanwhite mb-2">404: Name Not Found</h3>
+                <h3 className="text-lg font-bold text-daanwhite mb-2">Tiny Survival (WIP)</h3>
                 <p className="text-daanwhite/80 text-xs mb-3 flex-grow">
-                 You're shipwrecked. Collect resources and build a base on a (hopefully) deserted island.
+                 You're shipwrecked. Collect resources and build a base on a <s>dangerous</s> deserted island.
                 </p>
                 <div className="flex gap-2 flex-wrap mb-3">
-                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">GDScript</span>
-                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">Godot</span>
+                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">gamedev</span>
+                  <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">godot</span>
                 </div>
                 <div className="flex gap-2 mt-auto">
-                  <a href="#" className="border border-daanbrown text-daanwhite hover:bg-daanbrown hover:text-daanpurple px-3 py-1.5 rounded text-xs font-bold transition-colors flex items-center gap-1.5">
+                  <a href="/devlog?tag=tiny-survival" className="border border-daanbrown text-daanwhite hover:bg-daanbrown hover:text-daanpurple px-3 py-1.5 rounded text-xs font-bold transition-colors flex items-center gap-1.5">
                     <svg className="w-3 h-3 fill-current" viewBox="0 0 16 16">
                       <path d="M3 0h10v16H3V0z"/>
                       <path d="M5 3h6v1H5V3z"/>
                       <path d="M5 6h6v1H5V6z"/>
                       <path d="M5 9h4v1H5V9z"/>
                     </svg>
-                    DevLog
+                    Read DevLog
                   </a>
                 </div>
               </div>
