@@ -1,43 +1,39 @@
 ---
 title: "Starting  a new game project"
-date: "2025-05-25"
-tags: ["gamedev", "tiny-survival"]
+date: "2025-06-11"
+tags: ["gamedev", "nostalgic-rpg"]
 category: "game-dev"
 excerpt: "New week, new idea (kill me)"
 ---
 
 Welp, I've gone and started yet another project. Because apparently finishing games is overrated and my brain just wants the dopamine hit of new ideas.
 
-I'm calling this one "Tiny Survival" (very original, I know). The name might change later, but who am I kidding? I never rename projects.
+## How We Got Here
 
-For art, I'm using Pixel Frog's Tiny Swords asset pack because my own pixel art skills are... let's just say "developing." These assets are seriously gorgeous though - way better than anything I could make right now.
+I fell into a nostalgia spiral last weekend. Was watching some Pokémon Red videos, and before I knew it, I was knee-deep in Game Boy emulators. The natural progression was opening Godot and creating a new project folder. This makes, what, the fifth unfinished game this year?
 
-## The Game Concept
+## The Concept
 
-The basic idea is pretty simple:
-- Stranded on island (original, I know)
-- Need to repair bridge to progress
-- Need wood to repair bridge
-- Need to chop trees for wood
+The game is essentially a nostalgic open-world RPG drawing inspiration from both Pokémon and Old School RuneScape. The core elements include:
 
-But here's my twist - as you harvest resources, the island gets depleted, which angers the local inhabitants. Eventually they attack, forcing you to build defenses with the resources you've collected.
+- Retro pixel graphics with a Game Boy Color aesthetic
+- Open world exploration with minimal hand-holding
+- Skill progression system (fishing, crafting, etc.) similar to OSRS
+- Quest system with some actual narrative depth
+- Turn-based combat that remains engaging
 
-So it starts as survival, then morphs into tower defense-ish gameplay. At least that's the plan. We'll see if I actually make it that far.
+It's ambitious for a solo project, but I'm trying to scope it realistically this time.
 
-[tinysurvival-map-screen]
+## Technical Progress So Far
 
-I've sketched out the map above (well, thrown together the assets to look pretty for a screenshot). My actual planning sketch looks more like this:
+I've been working on the character movement. Getting pixel-perfect movement to feel right takes more effort than expected. Modern engines default to smooth transitions, but I need that grid-based movement that captures the retro feel.
 
-[tinysurvival-map-screen-2]
+The animation system is coming along. The character sprite moves in four directions with a simple but effective walk cycle. Nothing fancy, just enough to get the point across.
 
-## Current Progress
+## What's Next
 
-I'm tackling this area by area because otherwise my brain would explode. Since I'm building for mobile, I needed to implement touch controls. This sent me down a ridiculous rabbit hole of pathfinding and walkable areas that took way longer than expected. But hey, it works now!
+Next steps are building out the state machine and testing all basic functionalities, before mapping out the starting area and implementing the skills framework. Once those core systems are working, I'll have a better sense of the project's viability.
 
-[tinysurvival_click]
+I'll post updates here as things progress. Maybe having a devlog will provide the accountability I need to actually finish this one.
 
-The absolute nightmare was setting up the tree interaction system. Making trees clickable with visual indicators, programming the wood drops, and coding the collection mechanics nearly broke me. Thank god for Rapid Vectors' tutorial series - though I still managed to mess it up multiple times following step-by-step instructions.
-
-[tinysurvival_trees]
-
-And that's where I'm at. I've hit my mental capacity for today. Will I continue this project tomorrow, or get distracted by a shiny new idea? Place your bets now! :D
+For now, back to debugging.

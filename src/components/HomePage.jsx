@@ -115,16 +115,16 @@ function HomePage() {
               
               {/* Panel 4 */}
               <div className="bg-daanbrown/20 border-2 border-daanbrown rounded-lg p-4 w-72 min-h-56 flex flex-col shrink-0">
-                <h3 className="text-lg font-bold text-daanwhite mb-2">Tiny Survival (WIP)</h3>
+                <h3 className="text-lg font-bold text-daanwhite mb-2">Nostalgic RPG (WIP)</h3>
                 <p className="text-daanwhite/80 text-xs mb-3 flex-grow">
-                 You're shipwrecked. Collect resources and build a base on a <s>dangerous</s> deserted island.
+                A retro-inspired RPG inspired by Pokémon and OSRS.
                 </p>
                 <div className="flex gap-2 flex-wrap mb-3">
                   <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">gamedev</span>
                   <span className="bg-daanbrown/30 text-daanbrown px-2 py-1 rounded text-xs">godot</span>
                 </div>
                 <div className="flex gap-2 mt-auto">
-                  <a href="/devlog?tag=tiny-survival" className="border border-daanbrown text-daanwhite hover:bg-daanbrown hover:text-daanpurple px-3 py-1.5 rounded text-xs font-bold transition-colors flex items-center gap-1.5">
+                  <a href="/devlog?tag=nostalgic-rpg" className="border border-daanbrown text-daanwhite hover:bg-daanbrown hover:text-daanpurple px-3 py-1.5 rounded text-xs font-bold transition-colors flex items-center gap-1.5">
                     <svg className="w-3 h-3 fill-current" viewBox="0 0 16 16">
                       <path d="M3 0h10v16H3V0z"/>
                       <path d="M5 3h6v1H5V3z"/>
