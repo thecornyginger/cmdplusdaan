@@ -6,7 +6,7 @@ import { useState } from 'react'
 function Projects() {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null)
   return (
-    <div className="min-h-screen bg-stone-100">
+    <div className="bg-stone-100">
       {/* Main Content */}
       <motion.main
         className="max-w-6xl mx-auto px-4 py-12"
@@ -69,48 +69,48 @@ function Projects() {
 
             {/* Project 2 */}
             <motion.div
-              className="rounded-4xl p-6 border border-stone-800 flex flex-col relative"
+              className="rounded-4xl p-6 border border-stone-400 flex flex-col relative"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
               <div className="absolute top-6 left-6 flex space-x-2">
-                <span className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-xs font-medium">
+                <span className="bg-stone-400 text-stone-100 px-2 py-1 rounded-full text-xs font-medium">
                   appdev
                 </span>
-                <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-xs font-medium">
+                <span className="bg-transparent text-stone-400 border border-stone-400 px-2 py-1 rounded-full text-xs font-medium">
                   in-development
                 </span>
               </div>
-              <h3 className="text-3xl font-bold text-stone-800 mb-3 mt-12">Anchor</h3>
-              <p className="text-stone-800 mb-4 flex-1">
+              <h3 className="text-3xl font-bold text-stone-400 mb-3 mt-12">Anchor</h3>
+              <p className="text-stone-400 mb-4 flex-1">
                 A Mood & Habit Journal for iOS and Android.
               </p>
-              <div className="bg-transparent text-stone-800 border border-stone-800 px-4 py-2 rounded-lg mt-auto w-fit">
+              <div className="bg-transparent text-stone-400 border border-stone-400 px-4 py-2 rounded-lg mt-auto w-fit">
                 <span className="text-sm font-medium">Coming soon</span>
               </div>
             </motion.div>
 
             {/* Project 3 */}
             <motion.div
-              className="rounded-4xl p-6 border border-stone-800 flex flex-col relative"
+              className="rounded-4xl p-6 border border-stone-400 flex flex-col relative"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.0 }}
             >
               <div className="absolute top-6 left-6 flex space-x-2">
-                <span className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-xs font-medium">
+                <span className="bg-stone-400 text-stone-100 px-2 py-1 rounded-full text-xs font-medium">
                   gamedev
                 </span>
-                <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-xs font-medium">
+                <span className="bg-transparent text-stone-400 border border-stone-400 px-2 py-1 rounded-full text-xs font-medium">
                   in-development
                 </span>
               </div>
-              <h3 className="text-3xl font-bold text-stone-800 mb-3 mt-12">Untitled Idle RPG</h3>
-              <p className="text-stone-800 mb-4 flex-1">
+              <h3 className="text-3xl font-bold text-stone-400 mb-3 mt-12">Untitled Idle RPG</h3>
+              <p className="text-stone-400 mb-4 flex-1">
                 A retro Idle RPG inspired by OSRS, D&D and Stardew Valley.
               </p>
-              <div className="bg-transparent text-stone-800 border border-stone-800 px-4 py-2 rounded-lg mt-auto w-fit">
+              <div className="bg-transparent text-stone-400 border border-stone-400 px-4 py-2 rounded-lg mt-auto w-fit">
                 <span className="text-sm font-medium">Coming soon</span>
               </div>
             </motion.div>

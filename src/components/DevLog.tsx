@@ -23,7 +23,7 @@ function DevLog() {
         setDevlogs(devlogData)
         setFilteredDevlogs(devlogData)
         setTags(tagData)
-        
+
         // Check if there's a tag parameter in the URL
         const tagFromUrl = searchParams.get('tag')
         if (tagFromUrl && tagData.includes(tagFromUrl)) {
@@ -35,7 +35,7 @@ function DevLog() {
         setLoading(false)
       }
     }
-    
+
     loadData()
   }, [searchParams])
 
@@ -59,10 +59,10 @@ function DevLog() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        
+
         {/* Filter Tags */}
         {!loading && tags.length > 0 && (
-          <motion.div 
+          <motion.div
             className="mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -71,11 +71,10 @@ function DevLog() {
             <div className="flex gap-2 flex-wrap justify-center">
               <motion.button
                 onClick={() => setSelectedTag('')}
-                className={`px-4 py-2 rounded-4xl text-sm font-medium transition-all duration-200 ${
-                  selectedTag === ''
-                    ? 'bg-stone-800 text-stone-100 font-bold'
-                    : 'border border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-stone-100 hover:font-bold'
-                }`}
+                className={`px-4 py-2 rounded-4xl text-sm font-medium transition-all duration-200 ${selectedTag === ''
+                  ? 'bg-stone-800 text-stone-100 font-bold'
+                  : 'border border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-stone-100 hover:font-bold'
+                  }`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -85,11 +84,10 @@ function DevLog() {
                 <motion.button
                   key={tag}
                   onClick={() => setSelectedTag(tag)}
-                  className={`px-4 py-2 rounded-4xl text-sm font-medium transition-all duration-200 ${
-                    selectedTag === tag
-                      ? 'bg-stone-800 text-stone-100 font-bold'
-                      : 'border border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-stone-100 hover:font-bold'
-                  }`}
+                  className={`px-4 py-2 rounded-4xl text-sm font-medium transition-all duration-200 ${selectedTag === tag
+                    ? 'bg-stone-800 text-stone-100 font-bold'
+                    : 'border border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-stone-100 hover:font-bold'
+                    }`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -122,7 +120,7 @@ function DevLog() {
             layout
           >
             <AnimatePresence mode="popLayout">
-              {filteredDevlogs.map((devlog, index) => (
+              {filteredDevlogs.map((devlog) => (
                 <motion.div
                   key={devlog.slug}
                   className="rounded-4xl p-8 bg-stone-800 flex flex-col"
@@ -130,7 +128,7 @@ function DevLog() {
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.8, opacity: 0 }}
-                  transition={{ 
+                  transition={{
                     duration: 0.4,
                     layout: { duration: 0.5 }
                   }}
@@ -152,21 +150,21 @@ function DevLog() {
                   <div className="mt-auto flex items-center space-x-4">
                     <Link to={`/devlog/${devlog.slug}`}>
                       <motion.button
-                        className="flex items-center space-x-2 bg-transparent text-stone-100 border border-stone-100 px-4 py-2 rounded-lg hover:bg-stone-100 hover:text-stone-800 hover:font-bold transition-all duration-200 w-fit"
+                        className="flex items-center space-x-2 bg-transparent text-stone-100 border border-stone-100 px-4 py-2 rounded-lg hover:bg-stone-100 hover:text-stone-800 hover:font-bold transition-all duration-200 w-fit cursor-pointer"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         onMouseEnter={() => setHoveredIcon(devlog.slug)}
                         onMouseLeave={() => setHoveredIcon(null)}
                       >
                         <motion.div
-                          animate={{ 
+                          animate={{
                             scale: hoveredIcon === devlog.slug ? 1.1 : 1,
                           }}
                           transition={{ duration: 0.2 }}
                         >
-                          <BookmarkSimple 
-                            size={16} 
-                            weight={hoveredIcon === devlog.slug ? 'fill' : 'regular'} 
+                          <BookmarkSimple
+                            size={16}
+                            weight={hoveredIcon === devlog.slug ? 'fill' : 'regular'}
                           />
                         </motion.div>
                         <span className="text-sm font-medium">Read DevLog</span>

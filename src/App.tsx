@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from "motion/react"
 import Navbar from './components/Navbar'
-import ScrollToTop from './components/ScrollToTop'
+import ScrollToTop from './utils/ScrollToTop'
 import Home from './components/Home'
 import DevLog from './components/DevLog'
 import DevLogPost from './components/DevLogPost'
