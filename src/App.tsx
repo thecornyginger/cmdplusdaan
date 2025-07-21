@@ -2,6 +2,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from "motion/react"
 import Navbar from './components/Navbar'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './components/Home'
 import DevLog from './components/DevLog'
 import DevLogPost from './components/DevLogPost'
@@ -83,6 +84,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-stone-100">
         <Navbar />
         <AnimatedRoutes />

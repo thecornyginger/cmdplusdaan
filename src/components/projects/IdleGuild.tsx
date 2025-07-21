@@ -57,10 +57,10 @@ function IdleGuild() {
             <div className="rounded-4xl p-8 border border-stone-800">
               <div className="flex space-x-2 mb-6">
                 <span className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-xs font-medium">
-                  Tiny Game
+                  gamedev
                 </span>
                 <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-xs font-medium">
-                  Early Access
+                  early-access
                 </span>
               </div>
               <h2 className="text-2xl font-bold text-stone-800 mb-4">Idle Guild</h2>
@@ -150,20 +150,20 @@ function IdleGuild() {
             <h2 className="text-2xl font-bold text-stone-800">Roadmap</h2>
 
             {/* v0.1.0 */}
-            <div className="rounded-4xl p-6 border border-stone-800 relative">
-              <motion.button
-                onClick={() => setShowV010Details(!showV010Details)}
-                className="absolute top-6 right-6 text-stone-800 hover:text-stone-800 transition-colors duration-200"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
+            <motion.div
+              className="rounded-4xl p-6 border border-stone-800 relative cursor-pointer  transition-colors duration-200"
+              onClick={() => setShowV010Details(!showV010Details)}
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
+            >
+              <div className="absolute top-6 right-6 text-stone-800">
                 <motion.div
                   animate={{ rotate: showV010Details ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
                   <CaretRight size={20} />
                 </motion.div>
-              </motion.button>
+              </div>
 
               <div className="flex items-center space-x-3">
                 <span className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-sm font-medium">
@@ -201,23 +201,23 @@ function IdleGuild() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
 
             {/* v0.2.0 */}
-            <div className="rounded-4xl p-6 border border-stone-800 relative">
-              <motion.button
-                onClick={() => setShowV020Details(!showV020Details)}
-                className="absolute top-6 right-6 text-stone-800 hover:text-stone-800 transition-colors duration-200"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
+            <motion.div
+              className="rounded-4xl p-6 border border-stone-800 relative cursor-pointer  transition-colors duration-200"
+              onClick={() => setShowV020Details(!showV020Details)}
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
+            >
+              <div className="absolute top-6 right-6 text-stone-800">
                 <motion.div
                   animate={{ rotate: showV020Details ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
                   <CaretRight size={20} />
                 </motion.div>
-              </motion.button>
+              </div>
 
               <div className="flex items-center space-x-3">
                 <span className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-sm font-medium">
@@ -253,23 +253,23 @@ function IdleGuild() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
 
             {/* v0.3.0 */}
-            <div className="rounded-4xl p-6 border border-stone-800 relative">
-              <motion.button
-                onClick={() => setShowV030Details(!showV030Details)}
-                className="absolute top-6 right-6 text-stone-800 hover:text-stone-800 transition-colors duration-200"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
+            <motion.div
+              className="rounded-4xl p-6 border border-stone-800 relative cursor-pointer transition-colors duration-200"
+              onClick={() => setShowV030Details(!showV030Details)}
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
+            >
+              <div className="absolute top-6 right-6 text-stone-800">
                 <motion.div
                   animate={{ rotate: showV030Details ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
                   <CaretRight size={20} />
                 </motion.div>
-              </motion.button>
+              </div>
 
               <div className="flex items-center space-x-3">
                 <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-sm font-medium">
@@ -304,25 +304,25 @@ function IdleGuild() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
 
 
 
             {/* v0.4.0 */}
-            <div className="rounded-4xl p-6 border border-stone-800 relative">
-              <motion.button
-                onClick={() => setShowV040Details(!showV040Details)}
-                className="absolute top-6 right-6 text-stone-800 hover:text-stone-800 transition-colors duration-200"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
+            <motion.div
+              className="rounded-4xl p-6 border border-stone-800 relative cursor-pointer  transition-colors duration-200"
+              onClick={() => setShowV040Details(!showV040Details)}
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
+            >
+              <div className="absolute top-6 right-6 text-stone-800">
                 <motion.div
                   animate={{ rotate: showV040Details ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
                   <CaretRight size={20} />
                 </motion.div>
-              </motion.button>
+              </div>
 
               <div className="flex items-center space-x-3">
                 <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-sm font-medium">
@@ -358,23 +358,23 @@ function IdleGuild() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
 
             {/* v0.5.0 */}
-            <div className="rounded-4xl p-6 border border-stone-800 relative">
-              <motion.button
-                onClick={() => setShowV050Details(!showV050Details)}
-                className="absolute top-6 right-6 text-stone-800 hover:text-stone-800 transition-colors duration-200"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
+            <motion.div
+              className="rounded-4xl p-6 border border-stone-800 relative cursor-pointer  transition-colors duration-200"
+              onClick={() => setShowV050Details(!showV050Details)}
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
+            >
+              <div className="absolute top-6 right-6 text-stone-800">
                 <motion.div
                   animate={{ rotate: showV050Details ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
                   <CaretRight size={20} />
                 </motion.div>
-              </motion.button>
+              </div>
 
               <div className="flex items-center space-x-3">
                 <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-sm font-medium">
@@ -412,23 +412,23 @@ function IdleGuild() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
 
             {/* v1.0.0 */}
-            <div className="rounded-4xl p-6 border border-stone-800 relative">
-              <motion.button
-                onClick={() => setShowV100Details(!showV100Details)}
-                className="absolute top-6 right-6 text-stone-800 hover:text-stone-800 transition-colors duration-200"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
+            <motion.div
+              className="rounded-4xl p-6 border border-stone-800 relative cursor-pointer  transition-colors duration-200"
+              onClick={() => setShowV100Details(!showV100Details)}
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
+            >
+              <div className="absolute top-6 right-6 text-stone-800">
                 <motion.div
                   animate={{ rotate: showV100Details ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
                   <CaretRight size={20} />
                 </motion.div>
-              </motion.button>
+              </div>
 
               <div className="flex items-center space-x-3">
                 <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-sm font-medium">
@@ -460,7 +460,7 @@ function IdleGuild() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Divider 2 */}

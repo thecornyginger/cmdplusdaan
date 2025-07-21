@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion } from "motion/react"
+import { motion, AnimatePresence } from "motion/react"
 import { BookmarkSimple } from '@phosphor-icons/react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { loadDevlogs, getAllTags, formatDate } from '../utils/devlogs'
@@ -119,56 +119,64 @@ function DevLog() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            layout
           >
-            {filteredDevlogs.map((devlog, index) => (
-              <motion.div
-                key={devlog.slug}
-                className="rounded-4xl p-8 bg-stone-800 flex flex-col"
-                initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-              >
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {devlog.tags && devlog.tags.map((tag: string) => (
-                    <span
-                      key={tag}
-                      className="bg-stone-100 text-stone-800 px-2 py-1 rounded-full text-xs font-medium"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h3 className="text-2xl font-bold text-stone-100 mb-4">{devlog.title}</h3>
-                <p className="text-stone-100 mb-4 flex-1">
-                  {devlog.excerpt}
-                </p>
-                <div className="mt-auto flex items-center space-x-4">
-                  <Link to={`/devlog/${devlog.slug}`}>
-                    <motion.button
-                      className="flex items-center space-x-2 bg-transparent text-stone-100 border border-stone-100 px-4 py-2 rounded-lg hover:bg-stone-100 hover:text-stone-800 hover:font-bold transition-all duration-200 w-fit"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      onMouseEnter={() => setHoveredIcon(devlog.slug)}
-                      onMouseLeave={() => setHoveredIcon(null)}
-                    >
-                      <motion.div
-                        animate={{ 
-                          scale: hoveredIcon === devlog.slug ? 1.1 : 1,
-                        }}
-                        transition={{ duration: 0.2 }}
+            <AnimatePresence mode="popLayout">
+              {filteredDevlogs.map((devlog, index) => (
+                <motion.div
+                  key={devlog.slug}
+                  className="rounded-4xl p-8 bg-stone-800 flex flex-col"
+                  layout
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.8, opacity: 0 }}
+                  transition={{ 
+                    duration: 0.4,
+                    layout: { duration: 0.5 }
+                  }}
+                >
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {devlog.tags && devlog.tags.map((tag: string) => (
+                      <span
+                        key={tag}
+                        className="bg-stone-100 text-stone-800 px-2 py-1 rounded-full text-xs font-medium"
                       >
-                        <BookmarkSimple 
-                          size={16} 
-                          weight={hoveredIcon === devlog.slug ? 'fill' : 'regular'} 
-                        />
-                      </motion.div>
-                      <span className="text-sm font-medium">Read DevLog</span>
-                    </motion.button>
-                  </Link>
-                  <p className="text-xs text-stone-100">{formatDate(devlog.date)}</p>
-                </div>
-              </motion.div>
-            ))}
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="text-2xl font-bold text-stone-100 mb-4">{devlog.title}</h3>
+                  <p className="text-stone-100 mb-4 flex-1">
+                    {devlog.excerpt}
+                  </p>
+                  <div className="mt-auto flex items-center space-x-4">
+                    <Link to={`/devlog/${devlog.slug}`}>
+                      <motion.button
+                        className="flex items-center space-x-2 bg-transparent text-stone-100 border border-stone-100 px-4 py-2 rounded-lg hover:bg-stone-100 hover:text-stone-800 hover:font-bold transition-all duration-200 w-fit"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        onMouseEnter={() => setHoveredIcon(devlog.slug)}
+                        onMouseLeave={() => setHoveredIcon(null)}
+                      >
+                        <motion.div
+                          animate={{ 
+                            scale: hoveredIcon === devlog.slug ? 1.1 : 1,
+                          }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <BookmarkSimple 
+                            size={16} 
+                            weight={hoveredIcon === devlog.slug ? 'fill' : 'regular'} 
+                          />
+                        </motion.div>
+                        <span className="text-sm font-medium">Read DevLog</span>
+                      </motion.button>
+                    </Link>
+                    <p className="text-xs text-stone-100">{formatDate(devlog.date)}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </motion.div>
         )}
 

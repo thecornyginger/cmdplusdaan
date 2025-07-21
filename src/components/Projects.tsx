@@ -15,15 +15,7 @@ function Projects() {
         transition={{ duration: 0.6 }}
       >
         <div className="space-y-8">
-          {/* Page Header */}
-          <motion.h1
-            className="text-5xl font-bold text-stone-800 lg:text-6xl"
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Projects
-          </motion.h1>
+         
 
           {/* Projects Grid */}
           <motion.div
@@ -41,10 +33,10 @@ function Projects() {
             >
               <div className="absolute top-6 left-6 flex space-x-2">
                 <span className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-xs font-medium">
-                  Tiny Game
+                  gamedev
                 </span>
                 <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-xs font-medium">
-                  Early Access
+                  early-access
                 </span>
               </div>
               <h3 className="text-3xl font-bold text-stone-800 mb-3 mt-12">Idle Guild</h3>
@@ -84,10 +76,10 @@ function Projects() {
             >
               <div className="absolute top-6 left-6 flex space-x-2">
                 <span className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-xs font-medium">
-                  Tiny App
+                  appdev
                 </span>
                 <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-xs font-medium">
-                  In Development
+                  in-development
                 </span>
               </div>
               <h3 className="text-3xl font-bold text-stone-800 mb-3 mt-12">Anchor</h3>
@@ -108,10 +100,10 @@ function Projects() {
             >
               <div className="absolute top-6 left-6 flex space-x-2">
                 <span className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-xs font-medium">
-                  Tiny Game
+                  gamedev
                 </span>
                 <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-xs font-medium">
-                  In Development
+                  in-development
                 </span>
               </div>
               <h3 className="text-3xl font-bold text-stone-800 mb-3 mt-12">Untitled Idle RPG</h3>
