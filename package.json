@@ -12,6 +12,8 @@
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
     "@tailwindcss/vite": "^4.1.11",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "buffer": "^6.0.3",
     "gray-matter": "^4.0.3",
     "hamburger-react": "^2.5.2",

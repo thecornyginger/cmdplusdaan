@@ -7,8 +7,6 @@ slug: "anchor-devlog-5"
 image: "/blog-img/anchor-log-5.png"
 ---
 
-## The Moment of Truth
-
 After weeks of tinkering and second-guessing every design decision, I finally pulled the trigger and used EAS to create actual iOS build. You know that moment when your hobby project suddenly becomes a "real app" that could theoretically appear on someone's home screen? Yeah, that's terrifying and exciting in equal measure.
 
 Version 0.1 is officially alive, and somehow it actually... works?
