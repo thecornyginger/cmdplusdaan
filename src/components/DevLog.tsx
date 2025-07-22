@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from "motion/react"
+import { motion } from "motion/react"
 import { Link, useSearchParams } from 'react-router-dom'
 import { loadDevlogs, getAllTags, formatDate } from '../utils/devlogs'
 
