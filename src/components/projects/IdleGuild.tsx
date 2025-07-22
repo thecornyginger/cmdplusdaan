@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from "motion/react"
-import { BookmarkSimple, GooglePlayLogo, Envelope, CaretRight, MastodonLogo } from '@phosphor-icons/react'
+import { GooglePlayLogo, Envelope, CaretRight, MastodonLogo } from '@phosphor-icons/react'
 import { Link } from 'react-router-dom'
 import { loadDevlogs, formatDate } from '../../utils/devlogs'
 
