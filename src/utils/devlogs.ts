@@ -23,6 +23,7 @@ export async function loadDevlogs() {
         date: frontmatter.date || new Date().toISOString().split('T')[0],
         tags: frontmatter.tags || [],
         excerpt: frontmatter.excerpt || '',
+        image: frontmatter.image || null,
         content: markdownContent
       })
     } catch (error) {

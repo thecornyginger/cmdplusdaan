@@ -1,7 +1,7 @@
 ---
 title: "Early Access Journey"
 date: "2025-05-09"
-tags: ["gamedev", "idle-guild"]
+tags: ["idle-guild", "gamedev"]
 excerpt: "Diving headfirst into Android development without an Android device. What could possibly go wrong?"
 slug: "idleguild-devlog-1"
 ---

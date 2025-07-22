@@ -1,7 +1,7 @@
 ---
 title: "I'm Building Another Journal App"
 date: "2025-05-08"
-tags: ["appdev", "anchor"]
+tags: ["anchor", "appdev"]
 excerpt: "Started with my own everything-tracker because apparently I hate using existing solutions."
 slug: "anchor-devlog-1"
 ---

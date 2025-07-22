@@ -1,7 +1,7 @@
 ---
 title: "Breaking Down My Habit of Overcomplicating Things"
 date: "2025-05-24"
-tags: ["appdev", "anchor"]
+tags: ["anchor", "appdev"]
 excerpt: "I just want to check boxes without feeling guilty about my 7-day streak ending."
 slug: "anchor-devlog-3"
 ---

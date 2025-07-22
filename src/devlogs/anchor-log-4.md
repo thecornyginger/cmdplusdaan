@@ -1,7 +1,7 @@
 ---
 title: "Stealing Ideas and Calling It Inspiration"
 date: "2025-05-28"
-tags: ["appdev", "anchor"]
+tags: ["anchor", "appdev"]
 excerpt: "Because why use existing solutions when you can reinvent the wheel?"
 slug: "anchor-devlog-4"
 ---

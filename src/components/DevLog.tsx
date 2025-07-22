@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from "motion/react"
-import { BookmarkSimple } from '@phosphor-icons/react'
+import { motion } from "motion/react"
 import { Link, useSearchParams } from 'react-router-dom'
 import { loadDevlogs, getAllTags, formatDate } from '../utils/devlogs'
 
@@ -10,7 +9,6 @@ function DevLog() {
   const [tags, setTags] = useState<string[]>([])
   const [selectedTag, setSelectedTag] = useState('')
   const [loading, setLoading] = useState(true)
-  const [hoveredIcon, setHoveredIcon] = useState<string | null>(null)
   const [searchParams, setSearchParams] = useSearchParams()
 
   useEffect(() => {
@@ -110,72 +108,53 @@ function DevLog() {
           </motion.div>
         )}
 
-        {/* 3 Column Grid */}
+        {/* Card Grid */}
         {!loading && (
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            layout
-          >
-            <AnimatePresence mode="popLayout">
-              {filteredDevlogs.map((devlog) => (
-                <motion.div
-                  key={devlog.slug}
-                  className="rounded-4xl p-8 bg-stone-800 flex flex-col"
-                  layout
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.8, opacity: 0 }}
-                  transition={{
-                    duration: 0.4,
-                    layout: { duration: 0.5 }
-                  }}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredDevlogs.map((devlog) => (
+              <Link key={devlog.slug} to={`/devlog/${devlog.slug}`}>
+                <div
+                  className={`relative rounded-4xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200 aspect-square ${devlog.image ? '' : 'bg-stone-800'
+                    }`}
+                  style={devlog.image ? {
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('${devlog.image}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  } : {}}
                 >
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {devlog.tags && devlog.tags.map((tag: string) => (
-                      <span
-                        key={tag}
-                        className="bg-stone-100 text-stone-800 px-2 py-1 rounded-full text-xs font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  {/* Content Card */}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="bg-stone-100 rounded-4xl p-4 shadow-lg">
+                      {/* Header with Tags and Date */}
+                      <div className="flex justify-between items-start mb-3">
+                        {/* Category Tags */}
+                        <div className="flex flex-wrap gap-1">
+                          {devlog.tags && devlog.tags.length > 0 && devlog.tags.map((tag: string) => (
+                            <span
+                              key={tag}
+                              className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-xs font-medium"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        {/* Date */}
+                        <span className="text-stone-800 text-sm flex-shrink-0">{formatDate(devlog.date)}</span>
+                      </div>
+
+                      <h3 className="text-lg font-bold text-stone-800 mb-2 leading-tight">
+                        {devlog.title}
+                      </h3>
+                      <p className="text-stone-800 text-sm">
+                        {devlog.excerpt}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-stone-100 mb-4">{devlog.title}</h3>
-                  <p className="text-stone-100 mb-4 flex-1">
-                    {devlog.excerpt}
-                  </p>
-                  <div className="mt-auto flex items-center space-x-4">
-                    <Link to={`/devlog/${devlog.slug}`}>
-                      <motion.button
-                        className="flex items-center space-x-2 bg-transparent text-stone-100 border border-stone-100 px-4 py-2 rounded-lg hover:bg-stone-100 hover:text-stone-800 hover:font-bold transition-all duration-200 w-fit cursor-pointer"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        onMouseEnter={() => setHoveredIcon(devlog.slug)}
-                        onMouseLeave={() => setHoveredIcon(null)}
-                      >
-                        <motion.div
-                          animate={{
-                            scale: hoveredIcon === devlog.slug ? 1.1 : 1,
-                          }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          <BookmarkSimple
-                            size={16}
-                            weight={hoveredIcon === devlog.slug ? 'fill' : 'regular'}
-                          />
-                        </motion.div>
-                        <span className="text-sm font-medium">Read DevLog</span>
-                      </motion.button>
-                    </Link>
-                    <p className="text-xs text-stone-100">{formatDate(devlog.date)}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
+                </div>
+              </Link>
+            ))}
+          </div>
         )}
 
         {/* Empty State */}

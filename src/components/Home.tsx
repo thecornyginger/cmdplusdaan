@@ -1,9 +1,9 @@
 import {
-  Envelope,
-  BookmarkSimple,
-  ArrowRight,
-  MastodonLogo,
-  GameController
+  EnvelopeIcon,
+  BookmarkSimpleIcon,
+  ArrowRightIcon,
+  MastodonLogoIcon,
+  GameControllerIcon
 } from '@phosphor-icons/react'
 import { Link } from 'react-router-dom'
 import { motion } from "motion/react"
@@ -87,7 +87,7 @@ function Home() {
                     }}
                     transition={{ duration: 0.2 }}
                   >
-                    <BookmarkSimple
+                    <BookmarkSimpleIcon
                       size={16}
                       weight={hoveredIcon === 'devlog' ? 'fill' : 'regular'}
                     />
@@ -121,7 +121,7 @@ function Home() {
                     }}
                     transition={{ duration: 0.2 }}
                   >
-                    <ArrowRight
+                    <ArrowRightIcon
                       size={16}
                       weight={hoveredIcon === 'projects' ? 'bold' : 'regular'}
                     />
@@ -153,7 +153,7 @@ function Home() {
                     }}
                     transition={{ duration: 0.2 }}
                   >
-                    <Envelope
+                    <EnvelopeIcon
                       size={20}
                       weight={hoveredIcon === 'email' ? 'bold' : 'regular'}
                     />
@@ -176,7 +176,7 @@ function Home() {
                     }}
                     transition={{ duration: 0.2 }}
                   >
-                    <MastodonLogo
+                    <MastodonLogoIcon
                       size={20}
                       weight={hoveredIcon === 'mastodon' ? 'bold' : 'regular'}
                     />
@@ -199,7 +199,7 @@ function Home() {
                     }}
                     transition={{ duration: 0.2 }}
                   >
-                    <GameController
+                    <GameControllerIcon
                       size={20}
                       weight={hoveredIcon === 'itch' ? 'bold' : 'regular'}
                     />

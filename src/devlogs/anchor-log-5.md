@@ -1,7 +1,7 @@
 ---
 title: "Version 0.1: It Actually Works (Mostly)"
 date: "2025-06-06"
-tags: ["appdev", "anchor"]
+tags: ["anchor", "appdev"]
 excerpt: "Built my first real app version using EAS."
 slug: "anchor-devlog-5"
 ---

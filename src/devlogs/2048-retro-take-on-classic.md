@@ -1,7 +1,7 @@
 ---
 title: "2048: My Pixel Retro Take on a Classic"
 date: "2025-05-29"
-tags: ["gamedev", "tiny-experiments"]
+tags: ["experiments", "gamedev"]
 excerpt: "Combining 2048 with pixel animations in Godot"
 slug: "building-retro-2048"
 ---

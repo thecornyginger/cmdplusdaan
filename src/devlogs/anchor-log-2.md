@@ -1,7 +1,7 @@
 ---
 title: "Developing Apps with My Eyes (Not My Brain)"
 date: "2025-05-13"
-tags: ["appdev", "anchor"]
+tags: ["anchor", "appdev"]
 excerpt: "Turns out hot reloading is dangerous when you're the type of person who tweaks padding for three hours straight."
 slug: "anchor-devlog-2"
 ---
