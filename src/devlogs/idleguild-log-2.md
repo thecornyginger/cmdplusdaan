@@ -4,7 +4,7 @@ date: "2025-07-04"
 tags: ["idle-guild", "gamedev"]
 excerpt: "From crash reports to feature requests: how actual player feedback shaped the first major update"
 slug: "idleguild-devlog-2"
-image: ""
+image: "/blog-img/idleguild-log-2.png"
 ---
 
 After the chaotic beauty that was launch week, it was time to roll up my sleeves and turn those brutal one-star reviews into actual improvements. Turns out, some of those players were about to become my best collaborators.

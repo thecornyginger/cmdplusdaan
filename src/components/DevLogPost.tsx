@@ -125,7 +125,7 @@ function DevLogPost() {
         >
           {/* Left Panel - Image (1/3 width) */}
           <motion.div
-            className={`rounded-4xl border border-stone-800 aspect-square ${devlog.image ? '' : 'bg-stone-800'}`}
+            className={`rounded-4xl aspect-square ${devlog.image ? '' : 'bg-stone-800'}`}
             style={devlog.image ? {
               backgroundImage: `url('${devlog.image}')`,
               backgroundSize: 'cover',
