@@ -4,6 +4,7 @@ date: "2025-05-08"
 tags: ["anchor", "appdev"]
 excerpt: "Started with my own everything-tracker because apparently I hate using existing solutions."
 slug: "anchor-devlog-1"
+image: "/blog-img/anchor-log-1.png"
 ---
 
 ## Another Brilliant Idea at 2 AM

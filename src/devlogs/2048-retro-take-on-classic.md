@@ -4,6 +4,7 @@ date: "2025-05-29"
 tags: ["experiments", "gamedev"]
 excerpt: "Combining 2048 with pixel animations in Godot"
 slug: "building-retro-2048"
+image: "/blog-img/2048-log-1.png"
 ---
 
 So I fell into the 2048 rabbit hole again last week. One minute I'm casually swiping tiles "just to kill time," and the next thing I know, it's 2 AM and I'm still convinced I can hit that elusive 4096 tile. Instead of accepting my addiction, I decided to make it worse by building my own version. You know, for "practice."

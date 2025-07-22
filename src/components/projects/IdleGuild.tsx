@@ -489,34 +489,50 @@ function IdleGuild() {
             ) : idleGuildDevlogs.length > 0 ? (
               <div className="space-y-4">
                 {idleGuildDevlogs.slice(0, 2).map((devlog) => (
-                  <div key={devlog.slug} className="rounded-4xl p-8 bg-stone-800 flex flex-col">
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {devlog.tags && devlog.tags.map((tag: string) => (
-                        <span
-                          key={tag}
-                          className="bg-stone-100 text-stone-800 px-2 py-1 rounded-full text-xs font-medium"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <h3 className="text-2xl font-bold text-stone-100 mb-4">{devlog.title}</h3>
-                    <p className="text-stone-100 mb-4 flex-1">
-                      {devlog.excerpt}
-                    </p>
-                    <div className="mt-auto flex items-center space-x-4">
-                      <Link to={`/devlog/${devlog.slug}`}>
-                        <motion.button
-                          className="flex items-center space-x-2 bg-transparent text-stone-100 border border-stone-100 px-4 py-2 rounded-lg hover:bg-stone-100 hover:text-stone-800 hover:font-bold transition-all duration-200 w-fit"
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                        >
-                          <BookmarkSimple size={16} />
-                          <span className="text-sm font-medium">Read DevLog</span>
-                        </motion.button>
-                      </Link>
-                      <p className="text-xs text-stone-100">{formatDate(devlog.date)}</p>
-                    </div>
+                  <div key={devlog.slug} className="mb-4">
+                    <Link to={`/devlog/${devlog.slug}`}>
+                      <motion.div
+                        className={`relative rounded-4xl overflow-hidden cursor-pointer aspect-square ${devlog.image ? '' : 'bg-stone-800'
+                          }`}
+                        style={devlog.image ? {
+                          backgroundImage: `url('${devlog.image}')`,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center'
+                        } : {}}
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {/* Content Card */}
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <div className="bg-stone-100 rounded-4xl p-4 shadow-lg">
+                            {/* Header with Tags and Date */}
+                            <div className="flex justify-between items-start mb-3">
+                              {/* Category Tags */}
+                              <div className="flex flex-wrap gap-1">
+                                {devlog.tags && devlog.tags.length > 0 && devlog.tags.map((tag: string) => (
+                                  <span
+                                    key={tag}
+                                    className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-xs font-medium"
+                                  >
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
+
+                              {/* Date */}
+                              <span className="text-stone-800 text-sm flex-shrink-0">{formatDate(devlog.date)}</span>
+                            </div>
+
+                            <h3 className="text-lg font-bold text-stone-800 mb-2 leading-tight">
+                              {devlog.title}
+                            </h3>
+                            <p className="text-stone-800 text-sm">
+                              {devlog.excerpt}
+                            </p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    </Link>
                   </div>
                 ))}
 

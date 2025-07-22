@@ -133,7 +133,7 @@ function DevLog() {
                     className={`relative rounded-4xl overflow-hidden cursor-pointer aspect-square ${devlog.image ? '' : 'bg-stone-800'
                       }`}
                     style={devlog.image ? {
-                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('${devlog.image}')`,
+                      backgroundImage: `url('${devlog.image}')`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center'
                     } : {}}

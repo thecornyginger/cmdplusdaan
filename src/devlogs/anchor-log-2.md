@@ -4,6 +4,7 @@ date: "2025-05-13"
 tags: ["anchor", "appdev"]
 excerpt: "Turns out hot reloading is dangerous when you're the type of person who tweaks padding for three hours straight."
 slug: "anchor-devlog-2"
+image: "/blog-img/anchor-log-2.png"
 ---
 
 ## The Visual Addiction Kicks In

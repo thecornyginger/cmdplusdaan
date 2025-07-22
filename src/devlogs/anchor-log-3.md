@@ -4,6 +4,7 @@ date: "2025-05-24"
 tags: ["anchor", "appdev"]
 excerpt: "I just want to check boxes without feeling guilty about my 7-day streak ending."
 slug: "anchor-devlog-3"
+image: "/blog-img/anchor-log-3.png"
 ---
 
 ## Back to the Original Problem

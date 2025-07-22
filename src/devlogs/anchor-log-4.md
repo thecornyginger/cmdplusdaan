@@ -4,6 +4,7 @@ date: "2025-05-28"
 tags: ["anchor", "appdev"]
 excerpt: "Because why use existing solutions when you can reinvent the wheel?"
 slug: "anchor-devlog-4"
+image: "/blog-img/anchor-log-4.png"
 ---
 
 ## The Art of Strategic Borrowing

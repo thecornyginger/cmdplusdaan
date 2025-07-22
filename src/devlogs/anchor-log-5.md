@@ -1,9 +1,10 @@
 ---
-title: "Version 0.1: It Actually Works (Mostly)"
+title: "The Journal Actually Works! (mostly)"
 date: "2025-06-06"
 tags: ["anchor", "appdev"]
 excerpt: "Built my first real app version using EAS."
 slug: "anchor-devlog-5"
+image: "/blog-img/anchor-log-5.png"
 ---
 
 ## The Moment of Truth

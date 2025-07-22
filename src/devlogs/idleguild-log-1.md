@@ -4,6 +4,7 @@ date: "2025-05-09"
 tags: ["idle-guild", "gamedev"]
 excerpt: "Diving headfirst into Android development without an Android device. What could possibly go wrong?"
 slug: "idleguild-devlog-1"
+image: "/blog-img/idleguild-log-1.png"
 ---
 
 Welcome to the chaotic chronicles of launching my first mobile game. Spoiler alert: it went exactly as smoothly as you'd expect from someone who'd never touched the Google Play Console before.

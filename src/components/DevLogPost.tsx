@@ -272,7 +272,7 @@ function DevLogPost() {
                     <motion.div
                       className={`relative rounded-4xl overflow-hidden cursor-pointer aspect-square ${post.image ? '' : 'bg-stone-800'}`}
                       style={post.image ? {
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('${post.image}')`,
+                        backgroundImage: `url('${post.image}')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                       } : {}}
