@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion } from "motion/react"
+import { motion, AnimatePresence } from "motion/react"
 import { Link, useSearchParams } from 'react-router-dom'
 import { loadDevlogs, getAllTags, formatDate } from '../utils/devlogs'
 
@@ -110,51 +110,70 @@ function DevLog() {
 
         {/* Card Grid */}
         {!loading && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredDevlogs.map((devlog) => (
-              <Link key={devlog.slug} to={`/devlog/${devlog.slug}`}>
-                <div
-                  className={`relative rounded-4xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200 aspect-square ${devlog.image ? '' : 'bg-stone-800'
-                    }`}
-                  style={devlog.image ? {
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('${devlog.image}')`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                  } : {}}
-                >
-                  {/* Content Card */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-stone-100 rounded-4xl p-4 shadow-lg">
-                      {/* Header with Tags and Date */}
-                      <div className="flex justify-between items-start mb-3">
-                        {/* Category Tags */}
-                        <div className="flex flex-wrap gap-1">
-                          {devlog.tags && devlog.tags.length > 0 && devlog.tags.map((tag: string) => (
-                            <span
-                              key={tag}
-                              className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-xs font-medium"
-                            >
-                              {tag}
-                            </span>
-                          ))}
+          <motion.div 
+            key={`grid-${selectedTag}`}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+          >
+            {filteredDevlogs.map((devlog, index) => (
+              <motion.div
+                key={devlog.slug}
+                initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.4,
+                  delay: index * 0.05,
+                  ease: "easeOut"
+                }}
+              >
+                <Link to={`/devlog/${devlog.slug}`}>
+                  <motion.div
+                    className={`relative rounded-4xl overflow-hidden cursor-pointer aspect-square ${devlog.image ? '' : 'bg-stone-800'
+                      }`}
+                    style={devlog.image ? {
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('${devlog.image}')`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center'
+                    } : {}}
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {/* Content Card */}
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="bg-stone-100 rounded-4xl p-4 shadow-lg">
+                        {/* Header with Tags and Date */}
+                        <div className="flex justify-between items-start mb-3">
+                          {/* Category Tags */}
+                          <div className="flex flex-wrap gap-1">
+                            {devlog.tags && devlog.tags.length > 0 && devlog.tags.map((tag: string) => (
+                              <span
+                                key={tag}
+                                className="bg-stone-800 text-stone-100 px-2 py-1 rounded-full text-xs font-medium"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+
+                          {/* Date */}
+                          <span className="text-stone-800 text-sm flex-shrink-0">{formatDate(devlog.date)}</span>
                         </div>
 
-                        {/* Date */}
-                        <span className="text-stone-800 text-sm flex-shrink-0">{formatDate(devlog.date)}</span>
+                        <h3 className="text-lg font-bold text-stone-800 mb-2 leading-tight">
+                          {devlog.title}
+                        </h3>
+                        <p className="text-stone-800 text-sm">
+                          {devlog.excerpt}
+                        </p>
                       </div>
-
-                      <h3 className="text-lg font-bold text-stone-800 mb-2 leading-tight">
-                        {devlog.title}
-                      </h3>
-                      <p className="text-stone-800 text-sm">
-                        {devlog.excerpt}
-                      </p>
                     </div>
-                  </div>
-                </div>
-              </Link>
+                  </motion.div>
+                </Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
 
         {/* Empty State */}

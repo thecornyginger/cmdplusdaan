@@ -1,8 +1,17 @@
-import { Code, List } from '@phosphor-icons/react'
+import { Code } from '@phosphor-icons/react'
 import { Link, useLocation } from 'react-router-dom'
+import { useState } from 'react'
+import { motion, AnimatePresence } from "motion/react"
+import { Squash as Hamburger } from 'hamburger-react'
 
 function Navbar() {
   const location = useLocation()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+  }
 
   return (
     <>
@@ -43,11 +52,81 @@ function Navbar() {
             </div>
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button className="text-stone-800">
-                <List size={20} />
-              </button>
+              <Hamburger
+                toggled={isMobileMenuOpen}
+                toggle={setIsMobileMenuOpen}
+                size={20}
+                color="#1c1917"
+                duration={0.3}
+                distance="sm"
+                rounded
+              />
             </div>
           </div>
+
+          {/* Mobile menu */}
+          <AnimatePresence>
+            {isMobileMenuOpen && (
+              <motion.div
+                className="md:hidden border-t border-stone-800 bg-stone-100 overflow-hidden"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <motion.div
+                  className="px-6 py-4 space-y-3"
+                  initial={{ y: -20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -20, opacity: 0 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                >
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.3, delay: 0.15 }}
+                  >
+                    <Link
+                      to="/"
+                      onClick={closeMobileMenu}
+                      className={`block text-stone-800 text-m transition-all duration-200 ${location.pathname === '/' ? 'font-bold' : 'font-medium hover:font-bold'
+                        }`}
+                    >
+                      Home
+                    </Link>
+                  </motion.div>
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.3, delay: 0.2 }}
+                  >
+                    <Link
+                      to="/devlog"
+                      onClick={closeMobileMenu}
+                      className={`block text-stone-800 text-m transition-all duration-200 ${location.pathname === '/devlog' ? 'font-bold' : 'font-medium hover:font-bold'
+                        }`}
+                    >
+                      DevLog
+                    </Link>
+                  </motion.div>
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.3, delay: 0.25 }}
+                  >
+                    <Link
+                      to="/projects"
+                      onClick={closeMobileMenu}
+                      className={`block text-stone-800 text-m transition-all duration-200 ${location.pathname === '/projects' ? 'font-bold' : 'font-medium hover:font-bold'
+                        }`}
+                    >
+                      Projects
+                    </Link>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </nav>
     </>
