@@ -50,9 +50,9 @@ After wrestling with the Play Console for what felt like an eternity, I finally 
 
 Within days, the one-star reviews started rolling in like a parade of my coding mistakes:
 
-- "game says to click the skull and nothing happens." ⭐
-- "A crazy game that doesn't even let you touch it" ⭐  
-- "the most boring idle game ever." ⭐
+- "game says to click the skull and nothing happens." ★
+- "A crazy game that doesn't even let you touch it" ★
+- "the most boring idle game ever." ★
 
 Turns out my "thorough" testing on one budget Android device didn't quite capture the beautiful diversity of Android device chaos. Who could have predicted that, right?
 

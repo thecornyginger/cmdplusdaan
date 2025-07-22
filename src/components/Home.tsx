@@ -26,7 +26,7 @@ function Home() {
       >
         {/* Left Side - Image with Text */}
         <motion.div
-          className="relative lg:col-span-2 min-h-[500px] lg:min-h-0 bg-stone-800 rounded-4xl overflow-hidden"
+          className="relative lg:col-span-2 min-h-[600px] lg:min-h-0 bg-stone-800 rounded-4xl overflow-hidden"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
