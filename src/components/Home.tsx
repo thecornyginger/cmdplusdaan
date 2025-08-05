@@ -2,7 +2,7 @@ import {
   EnvelopeIcon,
   BookmarkSimpleIcon,
   ArrowRightIcon,
-  MastodonLogoIcon,
+  Butterfly,
   GameControllerIcon
 } from '@phosphor-icons/react'
 import { Link } from 'react-router-dom'
@@ -161,27 +161,27 @@ function Home() {
                   <span className="text-sm font-medium group-hover:font-bold transition-all duration-200">Email</span>
                 </motion.a>
                 <motion.a
-                  href="https://mastodon.social/@cmdplusdaan"
+                  href="https://bsky.app/profile/cmdplusdaan.bsky.social"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center space-x-3 text-stone-800 transition-all duration-200"
-                  title="Mastodon"
+                  title="Bluesky"
                   whileTap={{ scale: 0.98 }}
-                  onMouseEnter={() => setHoveredIcon('mastodon')}
+                  onMouseEnter={() => setHoveredIcon('bluesky')}
                   onMouseLeave={() => setHoveredIcon(null)}
                 >
                   <motion.div
                     animate={{
-                      scale: hoveredIcon === 'mastodon' ? 1.1 : 1,
+                      scale: hoveredIcon === 'bluesky' ? 1.1 : 1,
                     }}
                     transition={{ duration: 0.2 }}
                   >
-                    <MastodonLogoIcon
+                    <Butterfly
                       size={20}
-                      weight={hoveredIcon === 'mastodon' ? 'bold' : 'regular'}
+                      weight={hoveredIcon === 'bluesky' ? 'bold' : 'regular'}
                     />
                   </motion.div>
-                  <span className="text-sm font-medium group-hover:font-bold transition-all duration-200">Mastodon</span>
+                  <span className="text-sm font-medium group-hover:font-bold transition-all duration-200">Bluesky</span>
                 </motion.a>
                 <motion.a
                   href="https://cmdplusdaan.itch.io/"

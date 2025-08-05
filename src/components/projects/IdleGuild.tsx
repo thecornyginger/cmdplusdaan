@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from "motion/react"
-import { GooglePlayLogo, Envelope, CaretRight, MastodonLogo } from '@phosphor-icons/react'
+import { GooglePlayLogo, Envelope, CaretRight, Butterfly } from '@phosphor-icons/react'
 import { Link } from 'react-router-dom'
 import { loadDevlogs, formatDate } from '../../utils/devlogs'
 
@@ -108,14 +108,14 @@ function IdleGuild() {
                     <span className="text-sm font-medium group-hover:font-bold transition-all duration-200">Email</span>
                   </motion.a>
                   <motion.a
-                    href="https://mastodon.social/@cmdplusdaan"
+                    href="https://bsky.app/profile/cmdplusdaan.bsky.social"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex items-center space-x-3 text-stone-800 transition-all duration-200"
                     whileTap={{ scale: 0.98 }}
                   >
-                    <MastodonLogo size={20} />
-                    <span className="text-sm font-medium group-hover:font-bold transition-all duration-200">Mastodon</span>
+                    <Butterfly size={20} />
+                    <span className="text-sm font-medium group-hover:font-bold transition-all duration-200">Bluesky</span>
                   </motion.a>
                 </div>
               </div>
