@@ -8,9 +8,6 @@ function IdleGuild() {
   const [showV010Details, setShowV010Details] = useState(false)
   const [showV020Details, setShowV020Details] = useState(false)
   const [showV030Details, setShowV030Details] = useState(false)
-  const [showV040Details, setShowV040Details] = useState(false)
-  const [showV050Details, setShowV050Details] = useState(false)
-  const [showV100Details, setShowV100Details] = useState(false)
   const [idleGuildDevlogs, setIdleGuildDevlogs] = useState<any[]>([])
   const [devlogLoading, setDevlogLoading] = useState(true)
 
@@ -275,7 +272,7 @@ function IdleGuild() {
                 <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-sm font-medium">
                   v0.3.0
                 </span>
-                <span className="text-sm text-stone-800">Planned for August 2025</span>
+                <span className="text-sm text-stone-800">Planned for October 5th, 2025</span>
               </div>
 
               <AnimatePresence>
@@ -289,178 +286,26 @@ function IdleGuild() {
                   >
                     <div>
                       <h4 className="text-sm font-semibold text-stone-800 mb-1">Currently in development</h4>
-                      <p className="text-sm text-stone-800 mb-2">Focus: Making the game smoother and more beautiful</p>
+                      <p className="text-sm text-stone-800 mb-2">Focus: Complete refactor of the game and its core mechanics.</p>
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-stone-800 mb-1">New features planned:</h4>
                       <ul className="text-stone-800 space-y-1 text-sm">
-                        <li>• UI/UX Overhaul: Clean, intuitive interface that scales well across all devices</li>
-                        <li>• Under the Hood: Complete codebase restructure for easier feature additions and performance optimization</li>
+                        <li>• Build your guild with dedicated Facilities and Operations</li>
+                        <li>• Recruit adventurers to run and upgrade those Facilities</li>
+                        <li>• Train Hirelings to keep your Operations humming</li>
+                        <li>• Send adventurers on 50+ quests across the Sword Coast to level up</li>
+                        <li>• …and more systems currently in the works</li>
                       </ul>
                     </div>
                     <div>
-                      <p className="text-sm text-stone-800">This update sets the foundation for all future features. Expect faster loading, animations, and a more polished overall experience.</p>
+                      <p className="text-sm text-stone-800">This rebuild modernizes every loop so future updates land faster, deeper, and with the polish the guild deserves.</p>
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
             </motion.div>
 
-
-
-            {/* v0.4.0 */}
-            <motion.div
-              className="rounded-4xl p-6 border border-stone-800 relative cursor-pointer  transition-colors duration-200"
-              onClick={() => setShowV040Details(!showV040Details)}
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.99 }}
-            >
-              <div className="absolute top-6 right-6 text-stone-800">
-                <motion.div
-                  animate={{ rotate: showV040Details ? 90 : 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <CaretRight size={20} />
-                </motion.div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-sm font-medium">
-                  v0.4.0
-                </span>
-                <span className="text-sm text-stone-800">Planned for September 2025</span>
-              </div>
-
-              <AnimatePresence>
-                {showV040Details && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="space-y-3 overflow-hidden mt-3"
-                  >
-                    <div>
-                      <h4 className="text-sm font-semibold text-stone-800 mb-1">Currently drawing up ideas</h4>
-                      <p className="text-sm text-stone-800 mb-2">Focus: Transform how you build your guild team</p>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-stone-800 mb-1">New features planned:</h4>
-                      <ul className="text-stone-800 space-y-1 text-sm">
-                        <li>• Recruitment System: Replace static adventurers with recruitable adventurers of different classes (Fighter, Rogue, Wizard, Cleric, and more!)</li>
-                        <li>• Assignment Flexibility: Dynamically assign your hired adventurers to different operations</li>
-                        <li>• Class Synergies: Certain adventurer combinations will provide bonus effects</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="text-sm text-stone-800">Your guild becomes truly yours. Choose your team composition, optimize assignments, and create the perfect adventuring party.</p>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-
-            {/* v0.5.0 */}
-            <motion.div
-              className="rounded-4xl p-6 border border-stone-800 relative cursor-pointer  transition-colors duration-200"
-              onClick={() => setShowV050Details(!showV050Details)}
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.99 }}
-            >
-              <div className="absolute top-6 right-6 text-stone-800">
-                <motion.div
-                  animate={{ rotate: showV050Details ? 90 : 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <CaretRight size={20} />
-                </motion.div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-sm font-medium">
-                  v0.5.0
-                </span>
-                <span className="text-sm text-stone-800">Planned for October 2025</span>
-              </div>
-
-              <AnimatePresence>
-                {showV050Details && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="space-y-3 overflow-hidden mt-3"
-                  >
-                    <div>
-                      <h4 className="text-sm font-semibold text-stone-800 mb-1">Currently drawing up ideas</h4>
-                      <p className="text-sm text-stone-800 mb-2">Focus: Strategic depth and meaningful choices</p>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-stone-800 mb-1">New features planned:</h4>
-                      <ul className="text-stone-800 space-y-1 text-sm">
-                        <li>• Replace random events with 'Recruit Quests'. Send your adventurers on strategic missions</li>
-                        <li>• Multiple active quests with varying difficulty and rewards</li>
-                        <li>• Quest chains that unlock new regions and storylines</li>
-                        <li>• Player choice in which quests to prioritize</li>
-                        <li>• Meaningful consequences that affect your guild's story</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="text-sm text-stone-800">Transform from simple idle clicking to strategic guild management. Your choices will shape your guild's reputation and future opportunities.</p>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-
-            {/* v1.0.0 */}
-            <motion.div
-              className="rounded-4xl p-6 border border-stone-800 relative cursor-pointer  transition-colors duration-200"
-              onClick={() => setShowV100Details(!showV100Details)}
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.99 }}
-            >
-              <div className="absolute top-6 right-6 text-stone-800">
-                <motion.div
-                  animate={{ rotate: showV100Details ? 90 : 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <CaretRight size={20} />
-                </motion.div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <span className="bg-transparent text-stone-800 border border-stone-800 px-2 py-1 rounded-full text-sm font-medium">
-                  v1.0.0
-                </span>
-                <span className="text-sm text-stone-800">Planned for Q1 2026</span>
-              </div>
-
-              <AnimatePresence>
-                {showV100Details && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="space-y-3 overflow-hidden mt-3"
-                  >
-                    <div>
-                      <h4 className="text-sm font-semibold text-stone-800 mb-1">Still in the vision phase</h4>
-                      <p className="text-sm text-stone-800 mb-2">After months of building, refining, and listening to our community, version 1.0.0 represents the complete realization of Idle Guild's vision: a truly unique fantasy idle clicker that puts you in control of every aspect of your guild's destiny.</p>
-                    </div>
-                    <ul className="text-stone-800 space-y-1 text-sm">
-                      <li>• Complete Recruit Customization System</li>
-                      <li>• Comprehensive Guild Customization</li>
-                      <li>• Advanced Quest Framework</li>
-                      <li>• Mastery Progression</li>
-                      <li>• Player-First Design</li>
-                    </ul>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
           </motion.div>
 
           {/* Divider 2 */}
